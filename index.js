@@ -49,10 +49,15 @@ const user2 = new User({
 
 //      Find Method implement 
 
-// User.find({})                    find method without any condition
-User.find({age:{ $gt:22}})          //find method with condition
+User.find({})                    //find method without any condition
+// User.find({age:{$gt:22}})          //find method with condition
+// User.findOne({age:{$gt:22}})        //find method with findOne command for searching one data
+// User.find({_id:"674598ac01ea8d8eabb5820b"})         //find data with id one another "findById" also implemented
+// User.findById("674598ac01ea8d8eabb5820b")           //find data with "findById" method
     .then((res) => {
-        console.log(res);
+        console.log(res);       //print all the documents as a array 
+        console.log(res[0]);        //print documents as their index that are stored in these array
+        console.log(res[0].name);       //print particular object value in their document
     })
     .catch((err) => {
         console.log(err);
