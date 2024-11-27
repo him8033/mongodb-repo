@@ -29,7 +29,28 @@ const user2 = new User({
 
 //      Insert data or documents in collection one by one
 
-user2.save()
+// user2.save()
+//     .then((res) => {
+//         console.log(res);
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//     })
+
+//      Insert bulk data with "insertMany" method
+
+// User.insertMany([
+//     { name: "Tony", email: "tony@gmail.com", age: 22},
+//     { name: "Peter", email: "peter@gmail.com", age: 23},
+//     { name: "Bruce", email: "bruce@gmail.com", age: 24}
+// ]).then((res) => {
+//     console.log(res);
+// });
+
+//      Find Method 
+
+// User.find({})                    find method without any condition
+User.find({age:{ $gt:22}})          //find method with condition
     .then((res) => {
         console.log(res);
     })
