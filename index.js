@@ -47,7 +47,7 @@ const user2 = new User({
 //     console.log(res);
 // });
 
-//      Find Method 
+//      Find Method implement 
 
 // User.find({})                    find method without any condition
 User.find({age:{ $gt:22}})          //find method with condition
